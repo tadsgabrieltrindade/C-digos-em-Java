@@ -1,14 +1,9 @@
 import java.util.Scanner;
 
-public class Tarefa02-01 {
+public class main {
     public static void main(String[] args) {
 
         double num1, num2;
-
-        String opSoma = new String("soma");
-        String opSubtracao = new String("subtração");
-        String opMultiplicacao = new String("multiplicação");
-        String opDivisao = new String("divisão");
 
         Scanner input = new Scanner(System.in);
         double result;
@@ -16,24 +11,24 @@ public class Tarefa02-01 {
         System.out.println("Operações disponíveis: soma, subtração, multiplicação ou divisão");
         System.out.print("Digite a operação: ");
         String op = input.nextLine();
-        if (op.equalsIgnoreCase(opSoma) || op.equalsIgnoreCase(opSubtracao) || op.equalsIgnoreCase(opMultiplicacao) || op.equalsIgnoreCase(opDivisao) ) {
+        if (op.equalsIgnoreCase("soma") || op.equalsIgnoreCase("subtração") || op.equalsIgnoreCase("multiplicação") || op.equalsIgnoreCase("divisão") ) {
             System.out.println("Entre com o primeiro número: ");
             num1 = input.nextDouble();
             System.out.println("Entre com o segundo número: ");
             num2 = input.nextDouble();
-            if (op.equalsIgnoreCase(opSoma)) {
+            if (op.equalsIgnoreCase("soma")) {
                 result = add(num1, num2);
                 System.out.println("A soma entre os valores inseridos é " + result);
             }
-            if (op.equalsIgnoreCase(opSubtracao)) {
+            if (op.equalsIgnoreCase("subtração")) {
                 result = sub(num1, num2);
                 System.out.println("A subtração entre os valores inseridos é " + result);
             }
-            if (op.equalsIgnoreCase(opMultiplicacao)) {
+            if (op.equalsIgnoreCase("multiplicação")) {
                 result = multi(num1, num2);
                 System.out.println("A multiplicação entre os valores inseridos é " + result);
             }
-            if (op.equalsIgnoreCase(opDivisao)) {
+            if (op.equalsIgnoreCase("divisão")) {
                 if(num2 == 0)
                     System.out.println("Erro! Divisor igual a 0.");
                 else {
@@ -41,10 +36,9 @@ public class Tarefa02-01 {
                     System.out.println("A divisão entre os valores inseridos é " + result);
                 }
             }
-
-        }else {
+        }else
             System.out.println("Erro! Por favor, digite uma das operações disponíveis.");
-        }
+
         input.close();
     }
 
