@@ -9,4 +9,12 @@ public class Retangulo {
     public  double perimetroRetangulo(){
         return 2 * (base + altura);
     }
+
+    public boolean podeConter(double b, double h){
+        if(b <= base && h <= altura)
+            return true;
+        else
+            return false;
+    }
+
 }
