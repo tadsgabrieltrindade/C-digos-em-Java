@@ -32,7 +32,7 @@ public class main {
 
         System.out.println("\nO retângulo 1 pode conter o retângulo 2? " + r1.podeConter(r2.base, r2.altura));
         System.out.println("O retângulo 2 pode conter o retângulo 1? " + r2.podeConter(r1.base, r1.altura));
-        r2.print();
+
     }
 
 }
