@@ -3,7 +3,7 @@ public class Circulo {
      double pi = 3.14;
 
     public Circulo(double raio){
-        this.raio = raio;
+        this.raio = setRaio(raio);
     }
 
     public double calcularArea(){
@@ -19,7 +19,10 @@ public class Circulo {
     }
 
     public void setRaio(double r){
-        this.raio = r;
+         if(r <= 0)
+            throw new IllegalArgumentException("O lado é menor ou igual a zero.");
+        else
+            this.raio = r;
 
     }
 }
