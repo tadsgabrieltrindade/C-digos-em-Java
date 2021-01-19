@@ -108,29 +108,5 @@ public class Conta {
         if (valor <= 0.0)
             throw new IllegalArgumentException("O valor deve ser maior que 0!");
     }
-
-    private void verificarLimite(double valor) {
-        if (valor <= saldo) {
-            if (valor <= saldo + limite)
-                saldo = saldo - valor;
-            else
-                throw new IllegalArgumentException("Limite esgotado!");
-        } else {      //para poder entrar aqui, o valor ultrapassa o saldo disponível positivo
-            if (saldo > 0) {
-                if (valor <= saldo + limite) {
-                    double aux = valor - saldo;
-                    limite = limite - aux;
-                    saldo = aux * (-1);
-                } else
-                    throw new IllegalArgumentException("Limite indisponível!");
-            } else {
-                if (valor <= limite) {
-                    limite = limite - valor;
-                    saldo = saldo + (valor * (-1));
-                } else
-                    throw new IllegalArgumentException("Limite esgostado!");
-            }
-        }
-    }
 }
 
