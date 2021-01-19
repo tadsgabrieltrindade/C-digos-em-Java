@@ -2,7 +2,7 @@ public class Quadrado {
     public double lado;
 
     public Quadrado(double lado){
-        this.lado = lado;
+        this.setLado(lado);
     }
 
     public double areaQuadrado(){
