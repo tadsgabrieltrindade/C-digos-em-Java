@@ -27,6 +27,7 @@ public class main {
         r2.base = 3;
         r2.altura = 5;
 
+
         System.out.println("\nO quadrado 1 pode conter o quadrado 2? " + q1.podeConter(q2.lado));
         System.out.println("O quadrado 2 pode conter o quadrado 1? " + q2.podeConter(q1.lado));
 
